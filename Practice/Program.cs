@@ -8,17 +8,28 @@ namespace Practice
 {
 	class Program
 	{
+
+
 		static void Main()
 		{
-			string word = "INTERVIEW"; // The word to build up
-			int length = word.Length;  // Length of the word
+			int rows = 4; // Number of rows in the pyramid
 
-			for (int i = 0; i < length; i++)
+			for (int i = 1; i <= rows; i++)
 			{
-				// Print the substring from index 0 to i+1
-				Console.WriteLine(word.Substring(0, i + 1));
+				// Print spaces for alignment
+				for (int j = 1; j <= rows - i; j++)
+				{
+					Console.Write(" ");
+				}
+
+				// Print asterisks
+				for (int k = 1; k <= i; k++)
+				{
+					Console.Write("* ");
+				}
+
+				Console.WriteLine(); // Move to the next line after each row
 			}
 		}
 	}
-
 }
