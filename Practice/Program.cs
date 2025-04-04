@@ -4,24 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-namespace variables
+namespace Practice
 {
-	class demo
+	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
-			Console.WriteLine("enter value of n");
-			int n = Convert.ToInt32(Console.ReadLine());
-			for (int i = n; i >= 1; i--)
+			string word = "INTERVIEW"; // The word to build up
+			int length = word.Length;  // Length of the word
 
-				for (int j = 1; j <= i; j++)
-				{
-					Console.Write(j);
-				}
+			for (int i = 0; i < length; i++)
+			{
+				// Print the substring from index 0 to i+1
+				Console.WriteLine(word.Substring(0, i + 1));
+			}
 		}
-		Console.ReadLine();  
-        }
-}  
-}  
+	}
+
+}
